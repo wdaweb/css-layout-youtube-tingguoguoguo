@@ -1,0 +1,401 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: '微軟正黑體';
+}
+
+.container {
+  width: 100%;
+  background: #a4a2a2;
+
+}
+
+
+/* -----------------------------------------------------上邊區塊----------------------------------------- */
+#navigation {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  background: #ffffff;
+  position: fixed;
+  z-index: 1;
+
+}
+
+#search-box {
+  width: 520px;
+  padding: 11px;
+  margin: 0;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  margin-top: 7.5px;
+  box-sizing: border-box;
+  border: 1px solid rgba(146, 146, 146, 0.5);
+  border-right: none;
+  box-shadow: inset 1px 1px 1px rgba(239, 236, 236, 0.5);
+}
+
+#search-box:focus {
+  outline: none;
+  border: 1px solid rgba(37, 37, 194, 0.5);
+  box-shadow: inset 0.2px 0.2px 2px;
+}
+
+#search-button {
+  position: relative;
+  width: 70px;
+  padding: 11px;
+  box-sizing: border-box;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border: 1px solid rgba(146, 146, 146, 0.5);
+  background: rgba(239, 236, 236, 0.5);
+  z-index: 2;
+}
+
+#search-button::after {
+  position: absolute;
+  content: "搜尋";
+  line-height: 30px;
+  color: #ffffff;
+  width: 50px;
+  height: 30px;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: rgba(56, 56, 56, 0.8);
+  z-index: 2;
+  opacity: 0;
+}
+
+#search-button:hover::after {
+  opacity: 1;
+}
+
+#search-button:hover {
+  background: rgb(214, 211, 211);
+  cursor: pointer;
+}
+
+#search-button i {
+  transform: scale(1.4);
+  font-weight: 600;
+}
+
+
+.search-container {
+  font-size: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.micro {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 32%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(239, 236, 236, 0.9);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.micro i {
+  transform: scale(1.1);
+}
+
+.micro::after {
+  position: absolute;
+  content: "使用語音搜尋";
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  width: 92px;
+  height: 30px;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: rgba(56, 56, 56, 0.8);
+  z-index: 2;
+  opacity: 0;
+}
+
+.micro:hover::after {
+  opacity: 1;
+}
+
+.micro:hover {
+  background: rgb(214, 211, 211);
+  cursor: pointer;
+}
+
+.account {
+  padding: 4px;
+  padding-left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+}
+
+.user {
+  width: 110px;
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ytzone {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 56px;
+  margin-left: 8px;
+}
+
+.yticon {
+  width: 90px;
+  height: 20px;
+
+}
+
+.greybuttons {
+  position: absolute;
+  top: 52px;
+  left: 240px;
+  width: 88%;
+  height: 48px;
+  background: #ffffff;
+  margin: 0;
+  z-index: -1;
+}
+
+.button {
+  background: rgba(239, 236, 236, 0.9);
+  padding: 8px;
+  margin: 0 4px;
+  margin-top: 4px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: rgba(222, 222, 222, 0.9);
+}
+
+
+
+
+/* ------------------------------------------------------左邊區塊------------------------------------------------------- */
+#left {
+  position: relative;
+  width: 12%;
+  height: 100vh;
+  /* background: #43e434; */
+  float: left;
+  overflow-y: scroll;
+}
+
+.margintop {
+  margin-top: 56px;
+
+}
+
+.sidebutton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4vh;
+  padding-left: 24px;
+  border-radius: 8px;
+  /* background: aquamarine; */
+  /* border: 1px black solid; */
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: left;
+}
+
+.sidebutton:hover {
+  background: rgb(239, 236, 236);
+  cursor: pointer;
+}
+
+.sidebutton i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.yt {
+  color: red;
+}
+
+.sidebutton p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 0.2px;
+  background: rgba(193, 188, 200, 0.5);
+}
+
+.subscribe {
+  padding-left: 24px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.sb-author {
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.sidebutton .sb-author-text {
+  font-size: 12px;
+
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 20px;
+  background: #1050ff;
+  right: 20px;
+
+}
+
+
+.copyright {
+  margin-left: 12px;
+  font-size: 12px;
+  color: #a4a2a2;
+}
+
+
+a {
+  color: rgb(97, 97, 97);
+  font-size: 12px;
+  line-height: 20px;
+  padding-left: 4px;
+  text-decoration: none;
+}
+
+/* ------------------------------------------右邊區塊---------------------------------- */
+#right {
+  width: 88%;
+  height: 100vh;
+  padding-top: 70px;
+  /* background: #b878e2; */
+  float: right;
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  overflow-y: scroll;
+}
+
+/* -----------------------------------------影片內容區-------------------------------------- */
+.box {
+  /* border: solid 1px black; */
+  width: 300px;
+  height: 240px;
+  margin: 12px;
+  margin-top: 32px;
+  display: inline-block;
+  position: relative;
+
+
+}
+
+.box::after {
+  content: "播放影片";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  line-height: 160px;
+  text-align: center;
+  width: 280px;
+  height: 160px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(1, 1, 1, 0.1) 0%, rgba(0, 0, 0, 1) 100%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  opacity: 0;
+}
+
+.box:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cover {
+  width: 280px;
+  height: 160px;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+
+.intro {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.text {
+  flex: 1;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+
+}
+
+.view {
+  font-size: 12px;
+  line-height: 17px;
+  transform: scale(0.9);
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  color: rgb(146, 146, 146);
+}
